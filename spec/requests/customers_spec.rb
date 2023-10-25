@@ -5,7 +5,7 @@ RSpec.describe "Customers", type: :request do
 
   context "index" do
     it 'gets all the customers' do
-      # This test helped me detect the error! request.body!!! 
+      # THIS TEST HELPED ME to quickly DETECT THE ERROR! request.body!!! 
       get '/customers', params: { format: :json }
       json_response = JSON.parse(response.body)
       expect(json_response[0]["name"]).to eq(customer1.name)

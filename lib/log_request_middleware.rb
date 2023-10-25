@@ -11,8 +11,9 @@ class LogRequestMiddleware
       request: request_body, 
       headers: env["HTTP_AUTHORIZATION"], 
       url: request.path, 
-      # response: response.first
-      response: response.body
+      # CHANGE this line to fix it
+      response: response.first
+      # response: response.body
     )
 
     [status, headers, response]
